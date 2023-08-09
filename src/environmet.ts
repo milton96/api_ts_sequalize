@@ -5,10 +5,10 @@ import "dotenv/config"
 //import dotenv from 'dotenv';
 //dotenv.config();
 
-const ENV = {
+const env = {
     "server": {
         "PORT": parseInt(process.env["PORT"] || "3000", 10)
     }
 };
 
-export default ENV;
+export default env;
