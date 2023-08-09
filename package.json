@@ -1,0 +1,15 @@
+{
+  "name": "api_ts_sequalize",
+  "version": "1.0.0",
+  "description": "api with typescript and sequalize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sequalize",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC"
+}
