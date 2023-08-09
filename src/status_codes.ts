@@ -1,4 +1,6 @@
-const status = {
+import { StatusCode } from "interfaces/status_codes";
+
+const status: StatusCode = {
   "OK": {
     code: 200,
     msg: "Petición exitosa",
