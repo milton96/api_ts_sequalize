@@ -1,10 +1,8 @@
-//import "dotenv/config"
-import dotenv from 'dotenv';
+import ENV from "./environmet";
 import express, { Application } from "express";
 
-dotenv.config();
 
-const PORT: number = parseInt(process.env["PORT"] || "3000", 10);
+const PORT: number = ENV["server"]["PORT"];
 
 const app: Application = express();
 app.set("PORT", PORT);
