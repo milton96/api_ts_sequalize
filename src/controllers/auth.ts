@@ -16,7 +16,7 @@ const login = async (req: Request, res: Response) => {
     return response.getResponse(res, codesHttp["OK"]);
   } catch (error: any) {
     response.setError(error);
-    return response.getResponse(res, null);
+    return response.getResponse(res, codesHttp["INTERNAL_SERVER_ERROR"]);
   }
 };
 

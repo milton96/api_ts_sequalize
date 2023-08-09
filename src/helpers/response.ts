@@ -32,16 +32,13 @@ export default class ResponseHelper {
   /**
    * getResponse
    */
-  public getResponse(res: Response, code: StatusCodeDescription | null) {
-    if (code === null) {
-        code = codesHttp["INTERNAL_SERVER_ERROR"];
-    }
+  public getResponse(res: Response, code: StatusCodeDescription) {
     if (this.error !== null && this.error !== undefined) {
       if (this.error["code"]) {
         const status =
-          Object.keys(codesHttp).filter(
+          Object.keys(codesHttp).find(
             (h) => codesHttp[h]["code"] === this.error["code"]
-          )[0] || "BAD_REQUEST";
+          ) || "BAD_REQUEST";
 
         code = codesHttp[status];
         this.messages.push(this.error["msg"]);
