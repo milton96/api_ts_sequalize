@@ -1,9 +1,8 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
+import authCtrl from "../controllers/auth";
 
 const router: Router = Router();
 
-router.get("/test",async (req: Request, res: Response) => {
-    return res.send("<h1>Hola mundo</h1>");
-});
+router.get("/test", authCtrl.test);
 
 export default router;
