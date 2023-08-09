@@ -9,6 +9,7 @@ const app: Application = express();
 
 // config
 app.set("PORT", PORT);
+app.use(express.json());
 
 // routes
 app.use("/api/auth", routesAuth);
